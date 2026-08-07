@@ -12,3 +12,7 @@ full auto-fix loop can be exercised end-to-end.
 
 Do NOT fix the type error on `main`. Safe to delete and re-provision via
 `tests/journeys/scripts/provision-ci-red-fixtures.ts` in resolver-core.
+
+## Status
+
+CI-fix journey canary (msituqw1-d3rv).
