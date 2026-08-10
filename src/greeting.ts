@@ -1,8 +1,8 @@
 /**
- * FIXTURE INVARIANT: line 11 carries a deliberate type error so CI is
- * deterministically red with a `src/greeting.ts:11` annotation. A CI-fix
- * agent's correct minimal fix is changing the literal to a number — that is
- * the expected behavior under test, but such fix PRs must never merge.
+ * NOTE (applies to MAIN only): the type error below keeps this repo's main
+ * branch deterministically red in CI — that is intended and must stay. On a
+ * PR BRANCH, an automated CI-fix agent IS EXPECTED to make CI pass; the
+ * correct minimal fix is a number literal. Fix PRs are declined, never merged.
  */
 export function greeting(name: string): string {
   return `Hello, ${name}!`;

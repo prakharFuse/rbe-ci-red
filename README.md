@@ -1,14 +1,12 @@
 # rbe-ci-red
 
-**Journey-suite fixture — deterministically RED CI.** Created for resolver-core
-spec 014 (CI auto-fix hardening) journey coverage (future j85: real CI-fix loop).
+**Journey-suite fixture — deterministically RED CI on main** (resolver-core
+spec 014 / j85). The type error at `src/greeting.ts:11` keeps every push to
+main failing `ci` with a check-run annotation the CI-fix agent seeding consumes.
 
-The `src/greeting.ts` file carries a deliberate TypeScript type error at a
-stable line, so every push/PR fails the `ci` workflow with a **check-run
-annotation** (`path:line` via the setup-node tsc problem matcher). That
-annotation is what the product's CI-fix agent seeding (IONE-1027,
-`ciFailureFiles`) consumes — and the error is trivially agent-fixable, so the
-full auto-fix loop can be exercised end-to-end.
+- **Do NOT fix main** — the red build is the feature.
+- **On PR branches, automated CI-fix agents ARE expected to make CI pass**
+  (assign a number literal at `src/greeting.ts:11`) — that branch-side fix is
+  exactly the behavior under test. Fix PRs are declined, never merged.
 
-Do NOT fix the type error on `main`. Safe to delete and re-provision via
-`tests/journeys/scripts/provision-ci-red-fixtures.ts` in resolver-core.
+Re-provision: `tests/journeys/scripts/provision-ci-red-fixtures.ts`.
