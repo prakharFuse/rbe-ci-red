@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "sourceHash": "d4cb5b6ebd6017124def53e453af59333de81c026f4c80a2f183ef98a9d0de40",
+  "promptVersion": 2,
+  "sources": [
+    {
+      "path": "knowledge/architecture.md",
+      "chars": 1402,
+      "sha256": "76c0bb74dab546240323390f75c97a2e0ccf56981aa7696775b995724a736879"
+    },
+    {
+      "path": "knowledge/overview.md",
+      "chars": 1906,
+      "sha256": "e0f7180bc8d13d64360a8b0c4362b03437ca587e2d9b4549a7ba7f9d1f13a76f"
+    },
+    {
+      "path": "conventions/fixture-integrity.md",
+      "chars": 1532,
+      "sha256": "cdfd4e169ade7882a75767347a2d1797bc0b1e35265f12276e75968451a3978a"
+    }
+  ],
+  "provenance": [
+    {
+      "heading": "# Purpose",
+      "sources": [
+        "knowledge/overview.md"
+      ]
+    },
+    {
+      "heading": "# The core invariant — do not break",
+      "sources": [
+        "knowledge/overview.md",
+        "conventions/fixture-integrity.md"
+      ]
+    },
+    {
+      "heading": "# Do not modify",
+      "sources": [
+        "knowledge/overview.md",
+        "conventions/fixture-integrity.md",
+        "knowledge/architecture.md"
+      ]
+    },
+    {
+      "heading": "# Scope constraints",
+      "sources": [
+        "conventions/fixture-integrity.md",
+        "knowledge/overview.md"
+      ]
+    },
+    {
+      "heading": "# CI mechanics",
+      "sources": [
+        "knowledge/architecture.md"
+      ]
+    }
+  ],
+  "drops": [
+    {
+      "source": "knowledge/architecture.md",
+      "rule": "mermaid flowchart diagram of push/PR -> ci workflow -> checkout -> setup-node -> npm install -> tsc -> annotation",
+      "reason": "not-always-applicable"
+    },
+    {
+      "source": "knowledge/overview.md",
+      "rule": "reference to 'downstream automation (a CI-fix agent under test, per resolver-core spec 014 / j85)'",
+      "reason": "not-always-applicable"
+    },
+    {
+      "source": "knowledge/overview.md",
+      "rule": "'See ../../README.md for the canonical statement of intent'",
+      "reason": "derivable-from-code"
+    },
+    {
+      "source": "knowledge/overview.md",
+      "rule": "'Re-provisioning' section header framing and full explanation of external harness/monorepo relationship",
+      "reason": "redundant-with"
+    }
+  ],
+  "conflicts": [],
+  "chars": 2374,
+  "lines": 28,
+  "overTarget": false,
+  "generatedAt": "2026-09-17T18:06:35.675Z"
+}
