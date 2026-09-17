@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "sourceHash": "86636a5e3367adba30217a2b65e88e583c404bdcdb9077e381321d4c08d74a43",
+  "promptVersion": 2,
+  "sources": [
+    {
+      "path": "knowledge/architecture.md",
+      "chars": 1208,
+      "sha256": "622539e52372c1aa69eee0bf4174ca5fe4e200edad610587a46ca27a7f53a9c4"
+    },
+    {
+      "path": "knowledge/overview.md",
+      "chars": 1614,
+      "sha256": "96c57abf0ce1632a56536682ef42ef31d615f7efc8850527b0c569757d7631e5"
+    },
+    {
+      "path": "conventions/ci-fixture-rules.md",
+      "chars": 1210,
+      "sha256": "dc064b1a69c979ada3dcd510382573b73d64bdb91f77b5a2742552f254311edc"
+    }
+  ],
+  "provenance": [
+    {
+      "heading": "# Repository Purpose",
+      "sources": [
+        "knowledge/overview.md"
+      ]
+    },
+    {
+      "heading": "# The Intentional Type Error — Scope Discipline",
+      "sources": [
+        "knowledge/overview.md",
+        "conventions/ci-fixture-rules.md"
+      ]
+    },
+    {
+      "heading": "# Things Not To Touch",
+      "sources": [
+        "knowledge/overview.md",
+        "conventions/ci-fixture-rules.md",
+        "knowledge/architecture.md"
+      ]
+    }
+  ],
+  "drops": [
+    {
+      "source": "knowledge/architecture.md",
+      "rule": "mermaid flowchart of push/pull_request -> checkout -> setup-node -> npm install -> tsc -> check-run annotation -> resolver-core seeding",
+      "reason": "derivable-from-code"
+    },
+    {
+      "source": "knowledge/architecture.md",
+      "rule": "workflow triggers on push to branches: ['**'] (every branch) and on pull_request",
+      "reason": "derivable-from-code"
+    },
+    {
+      "source": "conventions/ci-fixture-rules.md",
+      "rule": "\"This repo has no normal 'coding standards' — it's a minimal fixture, and the only convention that matters is scope discipline around the intentional error\"",
+      "reason": "redundant-with",
+      "detail": "restated directly by the scope-discipline rules that follow it in the document"
+    }
+  ],
+  "conflicts": [],
+  "chars": 2062,
+  "lines": 19,
+  "overTarget": false,
+  "generatedAt": "2026-09-17T18:25:05.516Z"
+}
